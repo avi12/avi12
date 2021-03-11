@@ -13,9 +13,7 @@ const DATA = {
 function generateReadMe() {
   const data = fs.readFileSync(DIR);
   const output = Mustache.render(data.toString(), DATA);
-  console.log(process.cwd());
   fs.writeFileSync("README.md", output);
-  fs.readdirSync(".").forEach(value => console.log(value))
 }
 
 generateReadMe();
