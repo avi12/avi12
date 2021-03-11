@@ -20,7 +20,7 @@ function generateReadMe() {
         return line;
       }
       return `${line}  `;
-    });
+    }).join("\n");
   const output = Mustache.render(data, DATA);
   fs.writeFileSync("README.md", output);
 }
