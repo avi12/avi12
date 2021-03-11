@@ -1,0 +1,11 @@
+dependencies:
+  mustache: 4.1.0
+lockfileVersion: 5.2
+packages:
+  /mustache/4.1.0:
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-0FsgP/WVq4mKyjolIyX+Z9Bd+3WS8GOwoUTyKXT5cTYMGeauNTi2HPCwERqseC1IHAy0Z7MDZnJBfjabd4O8GQ==
+specifiers:
+  mustache: ^4.1.0
