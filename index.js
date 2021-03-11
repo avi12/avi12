@@ -11,8 +11,17 @@ const DATA = {
 };
 
 function generateReadMe() {
-  const data = fs.readFileSync(DIR);
-  const output = Mustache.render(data.toString(), DATA);
+  const data = fs
+    .readFileSync(DIR)
+    .toString()
+    .split("\n")
+    .map((line) => {
+      if (!line || line.startsWith("#")) {
+        return line;
+      }
+      return `${line}  `;
+    });
+  const output = Mustache.render(data, DATA);
   fs.writeFileSync("README.md", output);
 }
 
