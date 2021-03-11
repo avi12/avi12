@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "dependencies": {
     "mustache": "^4.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
   }
 }
