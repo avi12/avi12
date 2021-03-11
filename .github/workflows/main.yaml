@@ -17,12 +17,12 @@ jobs:
       - name: Setup NodeJs 13.x
         uses: actions/setup-node@v1
         with:
-          node-version: '13.x'
+          node-version: 13.x
       - name: Cache dependencies and build outputs to improve workflow execution time.
         uses: actions/cache@v1
         with:
           path: node_modules
-          key: ${{ runner.os }}-js-${{ hashFiles('pnpm-lock.yaml') }}
+          key: ${{ runner.os }}-js-${{ hashFiles('package-lock.json') }}
       - name: Install dependencies
         run: npm install
       - name: Generate README file
@@ -31,4 +31,4 @@ jobs:
         uses: mikeal/publish-to-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BREANCH_NAME: main
+          BRANCH_NAME: dynamic-main
