@@ -13,6 +13,7 @@ const DATA = {
 function generateReadMe() {
   const data = fs.readFileSync(DIR);
   const output = Mustache.render(data.toString(), DATA);
+  console.log("Creating README");
   fs.writeFileSync("README.md", output);
 }
 
