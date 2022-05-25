@@ -1,21 +1,24 @@
-dependencies:
-  mustache: 4.1.0
-devDependencies:
-  prettier: 2.2.1
-lockfileVersion: 5.2
-packages:
-  /mustache/4.1.0:
-    dev: false
-    hasBin: true
-    resolution:
-      integrity: sha512-0FsgP/WVq4mKyjolIyX+Z9Bd+3WS8GOwoUTyKXT5cTYMGeauNTi2HPCwERqseC1IHAy0Z7MDZnJBfjabd4O8GQ==
-  /prettier/2.2.1:
-    dev: true
-    engines:
-      node: '>=10.13.0'
-    hasBin: true
-    resolution:
-      integrity: sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
+lockfileVersion: 5.4
+
 specifiers:
-  mustache: ^4.1.0
-  prettier: ^2.2.1
+  mustache: ^4.2.0
+  prettier: ^2.6.2
+
+dependencies:
+  mustache: 4.2.0
+
+devDependencies:
+  prettier: 2.6.2
+
+packages:
+
+  /mustache/4.2.0:
+    resolution: {integrity: sha512-71ippSywq5Yb7/tVYyGbkBggbU8H3u5Rz56fH60jGFgr8uHwxs+aSKeqmluIVzM0m0kB7xQjKS6qPfd0b2ZoqQ==}
+    hasBin: true
+    dev: false
+
+  /prettier/2.6.2:
+    resolution: {integrity: sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
