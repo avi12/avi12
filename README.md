@@ -1,6 +1,6 @@
 ### Hey, I'm avi12
 
-I'm a 24-year-old Israeli guy ("he/him") who loves programming and aims to make the world a better place  
+I'm a 24-year-old Israeli guy who loves programming and aims to make the world a better place  
 I'm an independent developer experienced with web dev and have a passion for learning new things, mostly low-level coding and machine learning  
 
 Feel free to reach out via [email](mailto:avi6106@gmail.com), [Steam](https://steamcommunity.com/id/avi12) and Discord  
