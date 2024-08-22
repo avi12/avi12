@@ -1,5 +1,5 @@
-const Mustache = require("mustache");
-const fs = require("fs");
+import Mustache from "mustache";
+import fs from "fs";
 
 const DIR = "./main.mustache";
 
