@@ -2,8 +2,7 @@ name: README build
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   schedule:
     - cron: '0 0 22 8 *'
 
@@ -14,21 +13,33 @@ jobs:
     steps:
       - name: Checkout current repository to Master branch
         uses: actions/checkout@v4.1.7
+
       - name: Setup NodeJs
         uses: actions/setup-node@v4.0.3
         with:
           check-latest: true
-      - name: Cache dependencies and build outputs to improve workflow execution time.
+
+      - name: Cache dependencies and build outputs
         uses: actions/cache@v4.0.2
         with:
           path: node_modules
           key: ${{ runner.os }}-js-${{ hashFiles('package-lock.json') }}
+          
       - name: Install dependencies
         run: npm install
+
       - name: Generate README file
         run: node index.js
-      - name: Commit and Push new README.md to the repository
-        uses: mikeal/publish-to-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH_NAME: main
+
+      - name: Set up Git config and commit changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          git commit -m "Auto-generated README.md" || echo "No changes to commit"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
