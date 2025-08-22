@@ -19,8 +19,8 @@ jobs:
         with:
           check-latest: true
 
-      - name: Cache dependencies and build outputs
-        uses: actions/cache@v4.0.2
+      - name: Cache dependencies and build outputs to improve workflow execution time.
+        uses: actions/cache@v4
         with:
           path: node_modules
           key: ${{ runner.os }}-js-${{ hashFiles('package-lock.json') }}
